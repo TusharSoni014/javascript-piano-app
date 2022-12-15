@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(221, 246, 255);
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+}
+
+.container {
+    width: 750px;
+    aspect-ratio: 16/9;
+    padding: 10px;
+}
+
+.piano-container {
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    color: white;
+    background-color: #1b1b1b;
+    border-radius: 10px;
+}
+
+.piano-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+    align-self: flex-start;
+}
+
+.piano-header h3 {
+    font-size: 20px;
+}
+
+.piano-header input {
+    cursor: pointer;
+}
+
+.volume-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.volume-container span {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.keys-container {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    align-self: flex-end;
+    justify-content: center;
+    width: 100%;
+    height: 250px;
+}
+
+.white-key {
+    background-color: white;
+    color: grey;
+    flex-grow: 1;
+    cursor: pointer;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0px -5px 0 0px rgba(0, 0, 0, 0.4) inset;
+    user-select: none;
+}
+
+.white-key:hover{
+    background: linear-gradient(to bottom, white, rgb(235, 235, 235));
+    box-shadow: none;
+}
+.black-key:hover{
+    background: linear-gradient(to bottom, black, rgb(43, 43, 43));
+    box-shadow: none;
+}
+
+.white-key:active {
+    background: linear-gradient(to bottom, white, rgb(235, 235, 235));
+    box-shadow: none;
+}
+
+.black-container {
+    position: absolute;
+    top: 0;
+    display: flex;
+    width: 100%;
+}
+
+.black-key {
+    position: absolute;
+    width: 40px;
+    height: 120px;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    cursor: pointer;
+    user-select: none;
+    padding: 10px;
+    color: grey;
+    text-transform: uppercase;
+    background-color: black;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 -5px 0 0px rgba(128, 128, 128, 0.466) inset;
+}
+
+.black-key:active {
+    background: linear-gradient(to bottom, black, rgb(43, 43, 43));
+    box-shadow: none;
+}
+
+.active-black {
+    background: linear-gradient(to bottom, black, rgb(43, 43, 43));
+    box-shadow: none;
+}
+
+.active-white {
+    background: linear-gradient(to bottom, white, rgb(235, 235, 235));
+    box-shadow: none;
+}
+
+#w {
+    left: 7%;
+}
+
+#e {
+    left: 17%;
+}
+
+#t {
+    left: 37.5%;
+}
+
+#y {
+    left: 48%;
+}
+
+#u {
+    right: 35%;
+}
+
+#o {
+    right: 16.5%;
+}
+
+#p {
+    right: 6%;
+}
+
+@media screen and (max-width:568px) {
+    body {
+        rotate: 90deg;
+    }
+
+    .container {
+        width: 550px;
+        flex-shrink: 0;
+    }
+
+    .black-key {
+        width: 30px;
+    }
+
+    #w {
+        left: 5%;
+    }
+
+    #e {
+        left: 16%;
+    }
+
+    #t {
+        left: 37.5%;
+    }
+
+    #y {
+        left: 48%;
+    }
+
+    #u {
+        right: 35%;
+    }
+
+    #o {
+        right: 14.5%;
+    }
+
+    #p {
+        right: 4%;
+    }
+}
+
+@media screen and (max-width:328px) {
+    .container {
+        width: 350px;
+        flex-shrink: 0;
+    }
+}
